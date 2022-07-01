@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style-weather.css" />
+    <link rel="stylesheet" href="./style.css" />
+    <script defer src="./menu.js"></script>
+    <script defer src="./weather.js"></script>
+    <title>Weather App</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="menu-button">
+        <img src="./menu.png" alt="page-menu" />
+      </div>
+    </header>
+
+    <div class="outer-menu-window"></div>
+    <section class="menu menu-hidden">
+      <div class="menu-upper-part">
+        <p>MENU</p>
+        <button type="button" class="menu-close-btn">x</button>
+      </div>
+      <div class="menu-options">
+        <a href="todoList.html">Todo List</a>
+        <a href="customGame(flappyBirds).html">Flappy Birds</a>
+        <a href="chatApp.html">Chat App</a>
+        <a href="weather.html">Weather App</a>
+      </div>
+    </section>
+
+    <section class="section-center">
+      <div class="todo-container" id="container">
+        <h2>WEATHER APP</h2>
+        <div class="inputs">
+          <div>
+            <p class="country">country</p>
+            <p class="date"></p>
+            <p class="temperature">temperature</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

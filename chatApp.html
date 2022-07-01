@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./style-chat.css" />
+    <script defer src="./chatApp.js"></script>
+    <script defer src="./menu.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <title>Chat app</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="menu-button">
+        <img src="./menu.png" alt="page-menu" />
+      </div>
+    </header>
+
+    <div class="outer-menu-window"></div>
+    <section class="menu menu-hidden">
+      <div class="menu-upper-part">
+        <p>MENU</p>
+        <button type="button" class="menu-close-btn">x</button>
+      </div>
+      <div class="menu-options">
+        <a href="todoList.html">Todo List</a>
+        <a href="customGame(flappyBirds).html">Flappy Birds</a>
+        <a href="chatApp.html">Chat App</a>
+        <a href="weather.html">Weather App</a>
+      </div>
+    </section>
+
+    <div class="chatwindow">
+      <div class="alertBox">
+        <p class="alert">Please enter the chat room</p>
+      </div>
+
+      <div class="messwindow">
+        <ul id="messages"></ul>
+      </div>
+
+      <div class="sidebarOpener">
+        <div class="circle">></div>
+      </div>
+
+      <div class="accountBar">
+        <div class="btnArea">
+          <p>Users</p>
+        </div>
+
+        <ul class="accountList"></ul>
+      </div>
+
+      <form id="form" action="">
+        <input
+          id="input"
+          autocomplete="off"
+          placeholder="Send a message..."
+        /><button>Send</button>
+      </form>
+    </div>
+  </body>
+</html>

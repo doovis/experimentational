@@ -1,0 +1,244 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: auto;
+  max-width: 700px;
+  background-color: rgb(232, 235, 239);
+  overflow-x: hidden;
+}
+
+#edit {
+  border: none;
+  text-align: center;
+  background: transparent;
+}
+
+#edit:focus {
+  outline: none;
+}
+
+#restore {
+  width: 16px;
+  height: 16px;
+  visibility: hidden;
+}
+
+.task #done {
+  z-index: 0;
+  position: relative;
+  left: 25px;
+  margin-left: 8px;
+}
+
+.task-completed #done {
+  visibility: hidden;
+}
+
+.task-completed #restore {
+  visibility: visible;
+}
+
+.task-completed .task-text #edit {
+  color: rgb(133, 133, 133);
+  text-decoration: line-through;
+}
+
+.section-center {
+  margin-top: 8rem;
+  margin-bottom: 3rem;
+}
+
+.section-center .alert {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 18px;
+  border-radius: 15px;
+  margin: 0px;
+  font-size: 14px;
+  font-weight: bold;
+  color: rgb(24, 24, 24);
+  text-align: center;
+}
+
+.alert.fail {
+  background-color: rgb(253, 204, 204);
+  width: 80%;
+  margin: auto;
+  text-align: center;
+}
+
+.alert.success {
+  background-color: rgb(200, 247, 197);
+  width: 80%;
+  margin: auto;
+  text-align: center;
+}
+
+.todo-container {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  padding-top: 2rem;
+  min-height: 140px;
+  max-width: 700px;
+  border-radius: 10px;
+  background-color: rgb(255, 255, 255);
+}
+
+h2 {
+  margin: auto;
+  margin-top: 1em;
+}
+
+.inputs {
+  display: flex;
+  margin: auto;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  max-width: 400px;
+}
+
+/* ------- Modal ---------- */
+
+.modal {
+  visibility: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.62);
+}
+
+.window {
+  max-width: 400px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: space-between;
+  padding: 1rem 1rem;
+  border-radius: 10px;
+  background-color: rgb(255, 255, 255);
+}
+
+.window p {
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgb(181, 181, 181);
+}
+
+.btn {
+  background: rgb(84, 187, 255);
+  background: linear-gradient(
+    200deg,
+    rgb(84, 169, 255) 35%,
+    rgb(75, 145, 244) 100%
+  );
+  height: 25px;
+  width: 80px;
+  border-radius: 8px;
+  border: 1px solid rgb(65, 97, 121);
+  box-shadow: 1.2px 0.5px;
+  cursor: pointer;
+}
+
+.btns {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+/* ------- Modal end ---------- */
+
+/* ------- Input/task list ---------- */
+
+#button {
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  width: 80px;
+  background-color: rgb(84, 187, 255);
+  margin-left: 0px;
+  border-color: transparent;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  cursor: pointer;
+}
+
+#text-input {
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  padding: 5px;
+  width: 400px;
+  border-color: transparent;
+  font-weight: bold;
+  outline: none;
+  background-color: rgb(221, 221, 221);
+}
+
+.task-list {
+  margin: auto;
+  text-align: center;
+  width: 360px;
+  padding: 20px;
+  background-color: rgb(247, 247, 247);
+  border-radius: 10px;
+  margin-bottom: 2rem;
+}
+
+.task-list h4 {
+  color: rgb(50, 50, 50);
+  font-weight: 500;
+  margin: 0px;
+}
+
+.task-finish {
+  margin-left: 50px;
+  text-decoration: dashed;
+  background-color: brown;
+}
+
+.task {
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+  margin-bottom: 10px;
+  height: 30px;
+  border: 2px solid rgb(183, 229, 255);
+  border-top-left-radius: 2rem;
+  border-bottom-left-radius: 2rem;
+}
+
+.task-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.task img {
+  width: 14px;
+  height: 14px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.task-completed {
+  margin-left: 0px;
+  background: rgba(253, 204, 204, 0.2);
+  border: 2px solid rgb(253, 204, 204);
+}
+
+/* HOVERS */
+
+#button:hover {
+  background-color: rgb(155, 217, 255);
+  border: 2px solid rgb(85, 187, 255);
+}
+
+#button:active {
+  background-color: rgb(145, 200, 236);
+  box-shadow: 0.5px 0.8px;
+}
